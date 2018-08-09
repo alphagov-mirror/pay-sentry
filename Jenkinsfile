@@ -41,6 +41,7 @@ pipeline {
         }
       }
     }
+/*
     stage('Deploy') {
       when {
         branch 'master'
@@ -49,6 +50,7 @@ pipeline {
         deployEcs("sentry")
       }
     }
+*/
     stage('Complete') {
       failFast true
       parallel {

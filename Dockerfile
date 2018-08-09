@@ -16,4 +16,5 @@ WORKDIR /app
 ADD src/docker-startup.sh /app/docker-startup.sh
 ADD src/run-with-chamber.sh /app/run-with-chamber.sh
 
+USER sentry
 CMD bash ./docker-startup.sh
