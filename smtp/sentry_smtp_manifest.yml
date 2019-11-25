@@ -1,0 +1,14 @@
+---
+applications:
+  - name: sentry-smtp
+    memory: 1G
+    disk-quota: 1G
+    health-check-type: process
+    routes:
+      - route: ((route))
+    docker:
+      image: catatnight/postfix
+      username: ((docker-username))
+    env:
+      maildomain: sentry.govukpay
+      smtp_user: ((smtp_user_and_password))
